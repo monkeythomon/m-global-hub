@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南 · 开云</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #faf7f0;
+            color: #2f2e2a;
+            line-height: 1.7;
+            padding: 2.5rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 780px;
+            width: 100%;
+            background: #fffcf7;
+            padding: 2.8rem 2.2rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        /* ——— 开场短句 ——— */
+        .hero-tag {
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            color: #7f7a6e;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-top: 0.1rem;
+            margin-bottom: 1.2rem;
+            color: #2a2822;
+        }
+
+        h1 small {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #7f7a6e;
+        }
+
+        .opening {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #e9e3d8;
+        }
+
+        /* ——— 承接段落 ——— */
+        .intro {
+            margin: 2rem 0 1.8rem 0;
+        }
+
+        .intro p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* ——— 引用块 / 提示框 ——— */
+        .tip-box {
+            background: #f4efe6;
+            border-left: 4px solid #b8ab92;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0 2.2rem 0;
+            border-radius: 0 12px 12px 0;
+            font-style: normal;
+            color: #3f3b32;
+        }
+
+        .tip-box strong {
+            font-weight: 600;
+            color: #2f2e2a;
+        }
+
+        .tip-box a {
+            color: #5f5a4a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 400;
+        }
+
+        .tip-box a:hover {
+            color: #1f1d18;
+        }
+
+        /* ——— 特点列表 ——— */
+        .feature-list {
+            list-style: none;
+            margin: 2.2rem 0 2.2rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feature-list li {
+            background: #faf6f0;
+            padding: 1.2rem 1.6rem;
+            border-radius: 14px;
+            border: 1px solid #ece6db;
+            transition: box-shadow 0.2s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+        }
+
+        .feature-list li:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .feature-marker {
+            font-size: 1.3rem;
+            line-height: 1;
+            color: #9c8f79;
+            min-width: 1.6rem;
+        }
+
+        .feature-text {
+            flex: 1;
+        }
+
+        .feature-text strong {
+            display: block;
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 0.1rem;
+            color: #2a2822;
+        }
+
+        .feature-text span {
+            font-size: 0.95rem;
+            color: #5a5548;
+        }
+
+        /* ——— 温和结尾 ——— */
+        .closing {
+            margin-top: 2.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e9e3d8;
+            font-size: 1rem;
+            color: #4e4a40;
+            background: #fffcf7;
+        }
+
+        .closing p {
+            margin-bottom: 0.6rem;
+        }
+
+        .closing a {
+            color: #5f5a4a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .closing a:hover {
+            color: #1f1d18;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e9e3d8;
+            margin: 1.8rem 0;
+        }
+
+        /* ——— 响应式 ——— */
+        @media (max-width: 640px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .page {
+                padding: 1.8rem 1.2rem;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h1 small {
+                font-size: 1.4rem;
+                display: block;
+            }
+            .feature-list li {
+                padding: 1rem 1.2rem;
+            }
+            .tip-box {
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            .hero-tag {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句 -->
+    <div class="hero-tag"> — 简明指南</div>
+    <h1>从一次访问<br><small>开始熟悉</small></h1>
+
+    <div class="opening">
+        无论你是初次探路，还是偶尔路过，面对一个网站时，最先需要的往往不是复杂功能介绍，而是一份清清爽爽的落脚指引。
+    </div>
+
+    <!-- 承接段落 + 链接自然嵌入 -->
+    <div class="intro">
+        <p>
+            <a href="https://m-global-ky.com">开云</a> 更像一个安静的信息节点，不急于展示所有，却把该有的入口和说明梳理得干净。页面结构偏向实用，没有堆砌的弹窗或过度装饰，让浏览的人把注意力放回内容本身。
+        </p>
+        <p>
+            日常使用中，许多人会反复回来查阅某几个模块。这种节制且一致的布局，反而降低了每次重新适应的时间成本。如果你也偏爱那种不用思考“按钮在哪”的体验，这里或许能让你觉得顺手。
+        </p>
+    </div>
+
+    <!-- 提示框 / 引用块 （访问提醒） -->
+    <div class="tip-box">
+        <strong>📌 访问提醒</strong><br>
+        建议使用主流浏览器的最新版本，并允许加载常规样式。若遇到布局偏移或功能异常，可尝试清除缓存或切换网络环境后再试。部分动态内容依赖 JavaScript，请保持脚本开启状态。
+    </div>
+
+    <!-- 特点列表 -->
+    <ul class="feature-list">
+        <li>
+            <span class="feature-marker">·</span>
+            <div class="feature-text">
+                <strong>直白导航</strong>
+                <span>栏目名称即是内容本身，几乎不需要猜测分类意图，适合快速定位。</span>
+            </div>
+        </li>
+        <li>
+            <span class="feature-marker">·</span>
+            <div class="feature-text">
+                <strong>克制成文</strong>
+                <span>每个页面的文字量适中，重点段落用短句或列表呈现，方便扫读。</span>
+            </div>
+        </li>
+        <li>
+            <span class="feature-marker">·</span>
+            <div class="feature-text">
+                <strong>稳定框架</strong>
+                <span>没有频繁改版的困扰，功能模块之间保持一致的交互逻辑，减少误操作。</span>
+            </div>
+        </li>
+    </ul>
+
+    <!-- 温和结尾 + 再次自然链接 -->
+    <div class="closing">
+        <p>
+            如果之后需要再次查找资料、核对信息，或者只是想浏览一下近期更新，不妨把 <a href="https://m-global-ky.com">开云</a> 放进书签。安静的站点值得一个固定的位置。
+        </p>
+        <p style="margin-top: 0.8rem; font-style: italic; color: #7f7a6e;">
+            希望每一次打开，都像走进一间整理妥当的房间——不必重新适应，只管做你的事。
+        </p>
+    </div>
+
+    <hr>
+
+    <!-- 额外的小篇幅 FAQ 摘要，保持整体自然 -->
+    <div style="font-size: 0.92rem; color: #5a5548; margin-top: 0.6rem;">
+        <strong style="color: #2f2e2a; font-weight: 500;">常见疑问摘要</strong><br>
+        · 页面加载慢？先检查本地网络，部分资源来自第三方 CDN。<br>
+        · 找不到某个功能？可在站内搜索框尝试不同关键词，或浏览“全部页面”索引。<br>
+        · 移动端适配良好，推荐横屏浏览宽表格类内容。
+    </div>
+
+</div>
+</body>
+</html>
