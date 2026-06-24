@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 从一段叙述开始</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafbfc;
+      color: #1e2a38;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      padding: 2.4rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* 开篇短句 —— 像一句轻声自白 */
+    .opening {
+      margin-top: 1.6rem;
+      font-size: 1.8rem;
+      font-weight: 350;
+      letter-spacing: 0.02em;
+      color: #243447;
+      border-left: 3px solid #c0cfde;
+      padding-left: 1.2rem;
+      margin-bottom: 2.4rem;
+      line-height: 1.4;
+    }
+
+    .opening span {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #6a7b8c;
+      margin-top: 0.6rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* 承接段落 自然叙述 */
+    .lead {
+      font-size: 1.1rem;
+      color: #1d2b38;
+      margin-bottom: 2.8rem;
+      border-bottom: 1px solid #e2e9f0;
+      padding-bottom: 1.8rem;
+    }
+
+    .lead a {
+      color: #1d4f7a;
+      text-decoration: none;
+      border-bottom: 1px solid #b5ccde;
+      font-weight: 450;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .lead a:hover {
+      color: #0b2e47;
+      border-bottom-color: #0b2e47;
+    }
+
+    /* 特点列表 — 温和，带留白 */
+    .traits {
+      list-style: none;
+      margin: 2.4rem 0 2.8rem 0;
+    }
+
+    .traits li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 1.6rem;
+      padding: 0.6rem 0 0.6rem 0.2rem;
+      border-bottom: 1px dashed #e5edf5;
+    }
+
+    .traits li:last-child {
+      border-bottom: none;
+    }
+
+    .trait-marker {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: #e3edf7;
+      border-radius: 50%;
+      font-size: 0.85rem;
+      color: #1d4f7a;
+      margin-top: 0.2rem;
+    }
+
+    .trait-content {
+      flex: 1;
+    }
+
+    .trait-content strong {
+      display: block;
+      font-weight: 520;
+      font-size: 1.05rem;
+      margin-bottom: 0.15rem;
+      color: #152b39;
+    }
+
+    .trait-content p {
+      font-size: 0.95rem;
+      color: #3b4e5e;
+      margin: 0;
+    }
+
+    /* 场景引用 —— 克制，像一段摘录 */
+    .scene-note {
+      background: #f2f6fa;
+      padding: 1.6rem 1.8rem;
+      border-radius: 2px;
+      margin: 2.4rem 0 2.6rem 0;
+      font-size: 0.98rem;
+      color: #1f3543;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .scene-note em {
+      font-style: italic;
+      color: #2d5c7c;
+    }
+
+    /* FAQ 摘要 —— 极简，两个问答 */
+    .faq-mini {
+      margin: 2.8rem 0 2.2rem 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1.4rem;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #1f3749;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.01em;
+    }
+
+    .faq-a {
+      font-size: 0.92rem;
+      color: #455a6b;
+      padding-left: 0.2rem;
+      border-left: 2px solid #d6e1ed;
+      padding-left: 0.9rem;
+    }
+
+    /* 温和结尾 */
+    .closing {
+      margin-top: 3.4rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #dce5ef;
+      font-size: 1rem;
+      color: #2c4051;
+      text-align: left;
+    }
+
+    .closing a {
+      color: #1d4f7a;
+      text-decoration: none;
+      border-bottom: 1px solid #b9cedf;
+      font-weight: 450;
+      transition: border-color 0.2s;
+    }
+
+    .closing a:hover {
+      border-bottom-color: #1a3d5a;
+    }
+
+    .closing .small-remark {
+      font-size: 0.85rem;
+      color: #6b7e91;
+      margin-top: 0.7rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e8eef5;
+      margin: 2.2rem 0 0.8rem 0;
+    }
+
+    @media (max-width: 520px) {
+      body { padding: 1.6rem 1rem; }
+      .opening { font-size: 1.5rem; }
+      .lead { font-size: 1rem; }
+      .trait-content strong { font-size: 0.98rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 开篇短句 -->
+  <div class="opening">
+    一个站点，一个入口。
+    <span>—— 没有多余的话，就是想让你知道它用来做什么。</span>
+  </div>
+
+  <!-- 承接段落：从“快速识别用途”切入，自然嵌入链接 -->
+  <div class="lead">
+    刚接触到 <a href="https://mofficial-igame.com">爱游戏</a>，你可能会想：这是一个什么类型的站点？它服务于谁？其实答案就在名字里。它不追求复杂的分类或琳琅满目的标签，而是把注意力集中在一件事上——让想找游戏内容的人，有一条清晰的路径。没有多余的装饰，也没有让人困惑的导航，你看到的，就是它想表达的。
+  </div>
+
+  <!-- 特点列表（3项） -->
+  <ul class="traits">
+    <li>
+      <span class="trait-marker">1</span>
+      <div class="trait-content">
+        <strong>一目了然的指向</strong>
+        <p>页面承载的信息足够直接。你不需要费力猜测这个站是做什么的——从命名到结构，都在说同一件事。</p>
+      </div>
+    </li>
+    <li>
+      <span class="trait-marker">2</span>
+      <div class="trait-content">
+        <strong>克制的内容节奏</strong>
+        <p>没有弹窗、没有大段推销式文案。每段叙述都保持适当的距离，给浏览者留出思考和判断的空间。</p>
+      </div>
+    </li>
+    <li>
+      <span class="trait-marker">3</span>
+      <div class="trait-content">
+        <strong>专注于识别与连接</strong>
+        <p>无论你从哪个渠道过来，都能在几秒内确认：这里与游戏有关，并且提供了明确的后续去处。</p>
+      </div>
+    </li>
+  </ul>
+
+  <!-- 场景引用：日常使用片段 -->
+  <div class="scene-note">
+    “有时候只是想快速确认一个站点是不是跟游戏相关，不想读大段的介绍。<em>爱游戏</em> 的页面让我几眼就有了答案。”
+    <br>—— 来自一位普通浏览者的反馈
+  </div>
+
+  <!-- FAQ 摘要（两个常见问题） -->
+  <div class="faq-mini">
+    <div class="faq-item">
+      <div class="faq-q">▸ 这个网站主要面向哪些人？</div>
+      <div class="faq-a">任何希望快速找到游戏内容入口的人。不需要注册或登录，直接浏览即可。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">▸ 我能在这里看到游戏评测或新闻吗？</div>
+      <div class="faq-a">当前页面定位为介绍与引导，不聚合评测或资讯。它更像一个安静的起点，指向更具体的游戏内容。</div>
+    </div>
+  </div>
+
+  <!-- 温和结尾 -->
+  <div class="closing">
+    如果你只是想找一个干净的地方，确认某个游戏相关的站点是否值得留意，那么 <a href="https://mofficial-igame.com">爱游戏</a> 可能恰好符合你的习惯。没有催促，没有夸张的承诺，只有一段朴素的叙述和一个直接的链接。
+    <div class="small-remark">—— 读到这里，你应该已经知道它是什么了。</div>
+  </div>
+
+  <hr>
+  <div style="font-size:0.78rem; color:#7b8d9f; margin-top:0.5rem; letter-spacing:0.02em;">
+    &copy; 叙述页 · 内容基于真实定位
+  </div>
+</div>
+</body>
+</html>
