@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 使用指南与产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e2a3a;
+            line-height: 1.7;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 2.5rem 2.2rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02), 0 1px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        h1 {
+            font-weight: 500;
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+            color: #0b1c2f;
+            margin-bottom: 0.3rem;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            border-left: 4px solid #b7c9e2;
+            padding-left: 1rem;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 1.25rem;
+            margin-top: 2.5rem;
+            margin-bottom: 0.8rem;
+            color: #1e2a3a;
+            border-bottom: 1px solid #eef1f6;
+            padding-bottom: 0.4rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #1f2a3f;
+        }
+
+        a {
+            color: #1e5084;
+            text-decoration: none;
+            border-bottom: 1px solid #cbd9e9;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        a:hover {
+            color: #0a2c4e;
+            border-bottom-color: #0a2c4e;
+        }
+
+        .highlight-list {
+            list-style: none;
+            margin: 1.5rem 0 0.5rem;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            margin-bottom: 0.9rem;
+            padding-left: 1.6rem;
+            position: relative;
+            font-size: 0.98rem;
+        }
+
+        .highlight-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #8aa0bc;
+            font-weight: 300;
+        }
+
+        .tip-box {
+            background: #f3f6fc;
+            border-radius: 16px;
+            padding: 1.4rem 1.6rem;
+            margin: 2rem 0 1.2rem;
+        }
+
+        .tip-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .tip-box .label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #4f6b8a;
+            font-weight: 600;
+        }
+
+        .faq-item {
+            margin-bottom: 1.4rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+            color: #0f263f;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: #2c3d57;
+        }
+
+        .secondary-meta {
+            margin-top: 2.8rem;
+            font-size: 0.85rem;
+            color: #7c8ba0;
+            border-top: 1px solid #e9edf3;
+            padding-top: 1.8rem;
+            text-align: left;
+        }
+
+        .secondary-meta span {
+            display: inline-block;
+            background: #eef2f8;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            margin-right: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e6ebf3;
+            margin: 2rem 0 1.2rem;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1.2rem 0.8rem 3rem;
+            }
+            .container {
+                padding: 1.8rem 1.2rem;
+                border-radius: 18px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .subhead {
+                font-size: 0.88rem;
+                padding-left: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>爱游戏</h1>
+    <div class="subhead">简明指南 · 产品说明 · 使用建议</div>
+
+    <p><strong>爱游戏</strong>是一套面向轻量游戏用户的聚合型数字服务，提供内容发现、社区交流与基础工具支持。对于希望快速了解其功能边界与使用方式的用户，本文档梳理了关键信息与操作思路。</p>
+
+    <p>平台核心围绕“轻启即用”展开：无需繁琐注册即可浏览大部分公开内容，但部分互动功能（如评论、收藏或自定义列表）需要创建身份凭证。建议新用户先以访客模式熟悉界面布局，再根据实际需要决定是否完善账户配置。</p>
+
+    <h2>亮点与定位</h2>
+    <ul class="highlight-list">
+        <li><strong>分类浏览与标签筛选</strong> — 内容按类型、风格、时长等维度划分，减少信息过载，提升检索效率。</li>
+        <li><strong>无干扰阅读界面</strong> — 信息流以卡片式呈现，不自动播放音视频，避免被动消耗注意力。</li>
+        <li><strong>社区反馈可见</strong> — 每条内容均展示评分与简短评价摘要，帮助快速判断是否与个人偏好匹配。</li>
+        <li><strong>跨终端适配</strong> — 响应式设计保证在手机、平板及桌面端均能获得一致的浏览体验。</li>
+    </ul>
+
+    <h2>使用建议与场景</h2>
+    <p>如果你日常有零散时间希望轻松浏览内容，<strong>爱游戏</strong>的“每日精选”模块是一个合理的起点。该板块由算法结合编辑推荐生成，更新频率约每四小时一次。注意：个性化推荐依赖于用户主动标记兴趣标签，若未进行任何标记，系统将默认展示最近一周的热门条目。</p>
+
+    <p>对于需要深度探索的用户，建议定期查看“专题”区域。专题通常围绕特定主题（例如复古风格、独立作品、操作指南等）组织，时效性较强，内容聚合度较高。专题页面内提供详细的目录与相关条目跳转，适合沉浸式阅读或收集灵感。</p>
+
+    <h2>访问说明与可信提醒</h2>
+    <div class="tip-box">
+        <div class="label">▍ 提醒 · 客观认知</div>
+        <p><strong>爱游戏</strong>本身不提供任何形式的下载、支付或虚拟资产交易功能。平台仅作为信息展示与导航，所有外部链接均标注来源标识。为确保信息安全，请勿在站内输入个人敏感信息（如银行账号、证件号码等）。官方不会通过站内信或弹窗索要密码。</p>
+        <p>如遇到要求下载未知程序或扫码登录的页面，请保持警惕并及时通过平台内置反馈渠道举报。建议定期清除浏览器缓存，避免因长期保持登录状态导致信息泄露。</p>
+    </div>
+
+    <hr>
+
+    <h2>常见问题摘要</h2>
+    <div class="faq-item">
+        <strong>是否需要付费才能使用？</strong>
+        <p>目前 <a href="https://mportal-igame.com">爱游戏</a> 对所有公开内容免费开放。不排除未来针对增值功能（如高级筛选、历史数据导出）引入可选订阅，但基础浏览与社区互动始终保持免费。</p>
+    </div>
+    <div class="faq-item">
+        <strong>内容来源是否可靠？</strong>
+        <p>平台内容主要来自编辑团队人工筛选及经过验证的合作伙伴供稿。用户生成的评价与标签经基础审核后展示，存在一定延迟。每条内容均标注来源与发布时间，便于自行核实。</p>
+    </div>
+    <div class="faq-item">
+        <strong>如何获得更精准的推荐？</strong>
+        <p>在“偏好”页面中标记你感兴趣的类型或关键词，系统会基于这些标签逐步调整内容排序。标记越多，推荐相关性越高。若想重置偏好，可在设置中选择“清除兴趣数据”。</p>
+    </div>
+
+    <div class="secondary-meta">
+        <span>版本 2025.04</span>  产品说明页面 · 内容基于公开资料整理，仅供参考。
+    </div>
+</div>
+</body>
+</html>
